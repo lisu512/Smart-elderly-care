@@ -1,1 +1,26 @@
 # Smart-elderly-care
+
+## 这是北京交通大学大三小学期的智慧养老系统。本组兢兢业业，热爱劳动。
+
+Here is the translation for the provided text:
+
+### 1.1 System Architecture
+The overall architecture of the smart elderly care system consists of four layers: the database layer, the service layer, the business layer, and the presentation layer. The database layer interacts directly with the service layer, while the business layer processes and feeds data back to the frontend. The specific architecture is shown in Figure 1-1.
+
+**Figure 1-1 System Architecture Diagram**
+Our smart elderly care system adopts a clear four-layer architectural design, including the database layer, service layer, business layer, and presentation layer. At the database layer, we use the MySQL database, known for its stability and high performance, responsible for storing and managing all system data, including elderly information, health data, etc. The frontend uses React and Next.js frameworks, which combine two advanced JavaScript technology stacks to provide an efficient, responsive user interface while supporting server-side rendering, optimizing initial load speed and search engine optimization.
+The backend services are built with the Flask framework, a lightweight Python web framework favored for its simplicity and flexibility. The Flask framework handles requests from the frontend, encapsulates business logic, and interacts with the MySQL database to ensure data consistency and security. The service layer, as the bridge between the frontend and backend, offers RESTful APIs for the transmission and processing of business data.
+The business layer is the core of the system, containing various functional modules of the smart elderly care, such as monitoring management and elderly information management. These modules are carefully designed to ensure low coupling and high cohesion, making the system robust and easily expandable. The presentation layer displays the business logic in an intuitive and easy-to-use interface to users, utilizing the technical advantages of React and Next.js to provide a smooth and friendly operating environment. Overall, the architecture of our smart elderly care system is rational, meeting functional requirements while ensuring system performance and maintainability.
+
+### 1.2 System Functional Structure
+According to project requirements, the system functions are divided into two major modules: real-time monitoring and basic data management, each with different functional points. The specific functional structure is shown in Figure 1-2.
+
+**Figure 1-2 Overall Functional Structure Diagram**
+Real-time monitoring process management is the core functional module of the system, including six features: facial recognition, stranger detection, expression recognition, no-entry zone intrusion detection, fall detection, and fire detection. Users can rely on this system to monitor the dynamics of the nursing home in real time, and administrators can respond accordingly. Detailed introductions of each feature are as follows:
+Facial recognition is designed to monitor individuals in the nursing home in real time through CV (computer vision) and register their faces into the backend system for subsequent emotional monitoring and other operations.
+Stranger detection aims to identify unfamiliar faces in the nursing home to protect the elderly and locate targets faster in case of incidents.
+Emotion detection monitors the emotional states of the elderly in real time through CV, recording these emotions into the backend management system, which helps administrators better understand and cater to the emotional needs of the elderly.
+No-entry zone intrusion detection uses computer vision technology to monitor restricted areas in real time. If someone enters these areas, the system immediately triggers an alarm and logs the event in the database. This module continuously analyzes surveillance footage to identify the presence of people and assess potential intrusions, activating an alarm if a target approaches the restricted area and deactivating it if the target leaves.
+Fall detection aims to track the movements of the elderly in real time using computer vision technology, quickly issuing alerts in case of falls to notify caregivers of potential emergencies. This function continuously monitors the posture and movement changes of the elderly, detecting falls and providing visual prompts to ensure rapid caregiver response.
+Fire detection relies on the YOLOv5 model, focusing on identifying multiple fire-related targets, including sources of fire and smoke. This function is crucial for fire monitoring, detecting potential fire hazards throughout the nursing home and quickly issuing alerts to ensure the safety of the elderly and staff.
+The basic data management module mainly manages personnel information and monitoring logs. Personnel information includes the elderly and whitelisted individuals' information and facial features library, while monitoring logs primarily store events captured by various cameras, including facial information, elderly emotional information, stranger facial information, elderly falls, fire incidents, and unauthorized entry into restricted areas.
